@@ -33,8 +33,8 @@ Yii EAuth extension
 ### Поддерживаемые провайдеры "из коробки":
 
 * OpenID: Google, Яндекс
-* OAuth: Twitter
-* OAuth 2.0: Google, Facebook, ВКонтакте, Mail.ru, Мой круг, Одноклассники
+* OAuth: Twitter, LinkedIn
+* OAuth 2.0: Google, Facebook, ВКонтакте, Mail.ru, GitHub, Live, Мой круг, Одноклассники
 
 
 ### Ссылки
@@ -103,6 +103,24 @@ Yii EAuth extension
 				'facebook' => array(
 					// регистрация приложения: https://developers.facebook.com/apps/
 					'class' => 'FacebookOAuthService',
+					'client_id' => '...',
+					'client_secret' => '...',
+				),
+				'linkedin' => array(
+					// регистрация приложения: https://www.linkedin.com/secure/developer
+					'class' => 'LinkedinOAuthService',
+					'key' => '...',
+					'secret' => '...',
+				),
+				'github' => array(
+					// регистрация приложения: https://github.com/settings/applications
+					'class' => 'GitHubOAuthService',
+					'client_id' => '...',
+					'client_secret' => '...',
+				),
+				'live' => array(
+					// регистрация приложения: https://manage.dev.live.com/Applications/Index
+					'class' => 'LiveOAuthService',
 					'client_id' => '...',
 					'client_secret' => '...',
 				),

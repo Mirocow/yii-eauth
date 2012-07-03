@@ -5,7 +5,7 @@
  * Register application: http://vkontakte.ru/editapp?act=create&site=1
  * 
  * @author Maxim Zemskov <nodge@yandex.ru>
- * @link http://code.google.com/p/yii-eauth/
+ * @link http://github.com/Nodge/yii-eauth/
  * @license http://www.opensource.org/licenses/bsd-license.php
  */
 
@@ -18,13 +18,13 @@ require_once dirname(dirname(__FILE__)).'/EOAuth2Service.php';
 class VKontakteOAuthService extends EOAuth2Service {	
 	
 	protected $name = 'vkontakte';
-	protected $title = 'ВКонтакте';
+	protected $title = 'VK.com';
 	protected $type = 'OAuth';
 	protected $jsArguments = array('popup' => array('width' => 585, 'height' => 350));
 
 	protected $client_id = '';
 	protected $client_secret = '';
-	protected $scope = '';
+	protected $scope = 'friends';
 	protected $providerOptions = array(
 		'authorize' => 'http://api.vkontakte.ru/oauth/authorize',
 		'access_token' => 'https://api.vkontakte.ru/oauth/access_token',

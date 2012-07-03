@@ -36,8 +36,8 @@ The implementation of the authorization on your own server has several advantage
 ### Supported providers "out of box":
 
 * OpenID: Google, Yandex(ru)
-* OAuth: Twitter
-* OAuth 2.0: Google, Facebook, VKontake(ru), Mail.ru(ru), Moi Krug(ru), Odnoklassniki(ru)
+* OAuth: Twitter, LinkedIn
+* OAuth 2.0: Google, Facebook, Live, GitHub, VKontake(ru), Mail.ru(ru), Moi Krug(ru), Odnoklassniki(ru)
 
 
 ### Resources
@@ -106,6 +106,24 @@ The implementation of the authorization on your own server has several advantage
 				'facebook' => array(
 					// register your app here: https://developers.facebook.com/apps/
 					'class' => 'FacebookOAuthService',
+					'client_id' => '...',
+					'client_secret' => '...',
+				),
+				'linkedin' => array(
+					// register your app here: https://www.linkedin.com/secure/developer
+					'class' => 'LinkedinOAuthService',
+					'key' => '...',
+					'secret' => '...',
+				),
+				'github' => array(
+					// register your app here: https://github.com/settings/applications
+					'class' => 'GitHubOAuthService',
+					'client_id' => '...',
+					'client_secret' => '...',
+				),
+				'live' => array(
+					// register your app here: https://manage.dev.live.com/Applications/Index
+					'class' => 'LiveOAuthService',
 					'client_id' => '...',
 					'client_secret' => '...',
 				),
